@@ -1,0 +1,1510 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Demo page fremwork WordPress wooCommerce order"
+    />
+    <title>Demo page fremwork WordPress wooCommerce order</title>
+    <link href="/AdminMenuMain.css" rel="stylesheet" media="all">
+    <!--<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>-->
+    <script src="jquery-3.5.1.min.js"></script>
+    <script src='wp-includes/wpMock.js' type="application/javascript"></script>
+
+  </head>
+  <body class="wp-admin wp-core-ui js theme-twentytwenty woocommerce-page woocommerce-embed-page woocommerce-feature-enabled-activity-panels woocommerce-feature-enabled-analytics woocommerce-feature-enabled-analytics-dashboard woocommerce-feature-enabled-analytics-dashboardcustomizable woocommerce-feature-enabled-coupons woocommerce-feature-enabled-customer-effort-score-tracks woocommerce-feature-enabled-homescreen woocommerce-feature-enabled-marketing woocommerce-feature-enabled-mobile-app-banner woocommerce-feature-enabled-onboarding woocommerce-feature-enabled-remote-inbox-notifications woocommerce-feature-enabled-shipping-label-banner woocommerce-feature-enabled-store-alerts woocommerce-feature-enabled-wcpay  wc-wp-version-gte-53 edit-php auto-fold admin-bar post-type-shop_order branch-5-4 version-5-4-4 admin-color-fresh locale-pl-pl customize-support svg">
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="wpwrap">
+      <div id="adminmenumain">
+        <a href="#wpbody-content" class="screen-reader-shortcut">Przejdź do głownej zawartości</a>
+        <a href="#wp-toolbar" class="screen-reader-shortcut">Przejdź do paska narzędzi</a>
+        <div id="adminmenuback"></div>
+        <div id="adminmenuwrap">
+          <ul id="adminmenu">
+            <li class="wp-first-item wp-has-submenu wp-not-current-submenu menu-top menu-top-first menu-icon-dashboard menu-top-first menu-top-last"
+                id="menu-dashboard">
+              <a href="index.php"
+                 class="wp-first-item wp-has-submenu wp-not-current-submenu menu-top menu-top-first menu-icon-dashboard menu-top-first menu-top-last"
+                 aria-haspopup="true">
+                <div class="wp-menu-arrow">
+                  <div></div>
+                </div>
+                <div class="wp-menu-image dashicons-before dashicons-dashboard"><br /></div>
+                <div class="wp-menu-name">Kokpit</div>
+              </a>
+              <ul class="wp-submenu wp-submenu-wrap">
+                <li class="wp-submenu-head" aria-hidden="true">Kokpit</li>
+                <li class="wp-first-item"><a href="index.php" class="wp-first-item">Strona
+                  główna</a></li>
+                <li><a href="update-core.php">Aktualizacje <span class="update-plugins count-10"><span
+                        class="update-count">10</span></span></a></li>
+              </ul>
+            </li>
+            <li class="wp-not-current-submenu wp-menu-separator" aria-hidden="true">
+              <div class="separator"></div>
+            </li>
+            <li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-post open-if-no-js menu-top-first"
+                id="menu-posts">
+              <a href="edit.php"
+                 class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-post open-if-no-js menu-top-first"
+                 aria-haspopup="true">
+                <div class="wp-menu-arrow">
+                  <div></div>
+                </div>
+                <div class="wp-menu-image dashicons-before dashicons-admin-post"><br /></div>
+                <div class="wp-menu-name">Wpisy</div>
+              </a>
+              <ul class="wp-submenu wp-submenu-wrap">
+                <li class="wp-submenu-head" aria-hidden="true">Wpisy</li>
+                <li class="wp-first-item"><a href="edit.php" class="wp-first-item">Wszystkie
+                  wpisy</a></li>
+                <li><a href="post-new.php">Dodaj nowy</a></li>
+                <li><a href="edit-tags.php?taxonomy=category">Kategorie</a></li>
+                <li><a href="edit-tags.php?taxonomy=post_tag">Tagi</a></li>
+              </ul>
+            </li>
+            <li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-media" id="menu-media">
+              <a href="upload.php" class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-media"
+                 aria-haspopup="true">
+                <div class="wp-menu-arrow">
+                  <div></div>
+                </div>
+                <div class="wp-menu-image dashicons-before dashicons-admin-media"><br /></div>
+                <div class="wp-menu-name">Media</div>
+              </a>
+              <ul class="wp-submenu wp-submenu-wrap">
+                <li class="wp-submenu-head" aria-hidden="true">Media</li>
+                <li class="wp-first-item"><a href="upload.php" class="wp-first-item">Biblioteka</a>
+                </li>
+                <li><a href="media-new.php">Dodaj nowe</a></li>
+              </ul>
+            </li>
+            <li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-page" id="menu-pages">
+              <a href="edit.php?post_type=page"
+                 class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-page"
+                 aria-haspopup="true">
+                <div class="wp-menu-arrow">
+                  <div></div>
+                </div>
+                <div class="wp-menu-image dashicons-before dashicons-admin-page"><br /></div>
+                <div class="wp-menu-name">Strony</div>
+              </a>
+              <ul class="wp-submenu wp-submenu-wrap">
+                <li class="wp-submenu-head" aria-hidden="true">Strony</li>
+                <li class="wp-first-item"><a href="edit.php?post_type=page" class="wp-first-item">Wszystkie
+                  strony</a></li>
+                <li><a href="post-new.php?post_type=page">Dodaj nową</a></li>
+              </ul>
+            </li>
+            <li class="wp-not-current-submenu menu-top menu-icon-comments menu-top-last" id="menu-comments">
+              <a href="edit-comments.php"
+                 class="wp-not-current-submenu menu-top menu-icon-comments menu-top-last">
+                <div class="wp-menu-arrow">
+                  <div></div>
+                </div>
+                <div class="wp-menu-image dashicons-before dashicons-admin-comments"><br /></div>
+                <div class="wp-menu-name">Komentarze <span class="awaiting-mod count-0"><span
+                        class="pending-count" aria-hidden="true">0</span><span
+                        class="comments-in-moderation-text screen-reader-text">0 komentarzy oczekuje na moderację</span></span>
+                </div>
+              </a></li>
+            <li class="wp-not-current-submenu wp-menu-separator woocommerce" aria-hidden="true">
+              <div class="separator"></div>
+            </li>
+            <li class="wp-has-submenu wp-has-current-submenu wp-menu-open menu-top menu-icon-generic toplevel_page_woocommerce menu-top-first"
+                id="toplevel_page_woocommerce"><a href="admin.php?page=wc-admin"
+                                                  class="wp-has-submenu wp-has-current-submenu wp-menu-open menu-top menu-icon-generic toplevel_page_woocommerce menu-top-first"
+                                                  aria-haspopup="true">
+              <div class="wp-menu-arrow">
+                <div></div>
+              </div>
+              <div class="wp-menu-image dashicons-before dashicons-admin-generic"><br /></div>
+              <div class="wp-menu-name">WooCommerce</div>
+            </a>
+              <ul class="wp-submenu wp-submenu-wrap">
+                <li class="wp-submenu-head" aria-hidden="true">WooCommerce</li>
+                <li class="wp-first-item"><a href="admin.php?page=wc-admin" class="wp-first-item">Strona
+                  główna</a></li>
+                <li class="current"><a href="edit.php?post_type=shop_order" class="current"
+                                       aria-current="page">Zamówienia <span
+                        class="awaiting-mod update-plugins count-1"><span
+                        class="processing-count">1</span></span></a></li>
+                <li><a href="admin.php?page=wc-admin&amp;path=/customers">Klienci</a></li>
+                <li><a href="admin.php?page=coupons-moved">Kupony</a></li>
+                <li><a href="admin.php?page=wc-reports">Raporty</a></li>
+                <li><a href="admin.php?page=wc-settings">Ustawienia</a></li>
+                <li><a href="admin.php?page=wc-status">Status</a></li>
+                <li><a href="admin.php?page=wc-addons">Rozszerzenia </a></li>
+              </ul>
+            </li>
+            <li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-product"
+                id="menu-posts-product">
+              <a href="edit.php?post_type=product"
+                 class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-product"
+                 aria-haspopup="true">
+                <div class="wp-menu-arrow">
+                  <div></div>
+                </div>
+                <div class="wp-menu-image dashicons-before dashicons-admin-post"><br /></div>
+                <div class="wp-menu-name">Produkty</div>
+              </a>
+              <ul class="wp-submenu wp-submenu-wrap">
+                <li class="wp-submenu-head" aria-hidden="true">Produkty</li>
+                <li class="wp-first-item"><a href="edit.php?post_type=product"
+                                             class="wp-first-item">Wszystkie produkty</a></li>
+                <li><a href="post-new.php?post_type=product">Dodaj nowy</a></li>
+                <li><a href="edit-tags.php?taxonomy=product_cat&amp;post_type=product">Kategorie</a></li>
+                <li><a href="edit-tags.php?taxonomy=product_tag&amp;post_type=product">Tagi</a></li>
+                <li><a href="edit.php?post_type=product&amp;page=product_attributes">Atrybuty</a></li>
+              </ul>
+            </li>
+            <li class="wp-has-submenu wp-not-current-submenu menu-top toplevel_page_wc-admin&amp;path=/analytics/overview"
+                id="toplevel_page_wc-admin-path--analytics-overview"><a
+                    href="admin.php?page=wc-admin&amp;path=/analytics/overview"
+                    class="wp-has-submenu wp-not-current-submenu menu-top toplevel_page_wc-admin&amp;path=/analytics/overview"
+                    aria-haspopup="true">
+              <div class="wp-menu-arrow">
+                <div></div>
+              </div>
+              <div class="wp-menu-image dashicons-before dashicons-chart-bar"><br /></div>
+              <div class="wp-menu-name">Statystyki</div>
+            </a>
+              <ul class="wp-submenu wp-submenu-wrap">
+                <li class="wp-submenu-head" aria-hidden="true">Statystyki</li>
+                <li class="wp-first-item"><a href="admin.php?page=wc-admin&amp;path=/analytics/overview"
+                                             class="wp-first-item">Przegląd</a></li>
+                <li><a href="admin.php?page=wc-admin&amp;path=/analytics/products">Produkty</a></li>
+                <li><a href="admin.php?page=wc-admin&amp;path=/analytics/revenue">Przychody</a></li>
+                <li><a href="admin.php?page=wc-admin&amp;path=/analytics/orders">Zamówienia</a></li>
+                <li><a href="admin.php?page=wc-admin&amp;path=/analytics/variations">Warianty</a></li>
+                <li><a href="admin.php?page=wc-admin&amp;path=/analytics/categories">Kategorie</a></li>
+                <li><a href="admin.php?page=wc-admin&amp;path=/analytics/coupons">Kupony</a></li>
+                <li><a href="admin.php?page=wc-admin&amp;path=/analytics/taxes">Podatki</a></li>
+                <li><a href="admin.php?page=wc-admin&amp;path=/analytics/downloads">Pliki do pobrania</a>
+                </li>
+                <li><a href="admin.php?page=wc-admin&amp;path=/analytics/stock">Magazyn</a></li>
+                <li><a href="admin.php?page=wc-admin&amp;path=/analytics/settings">Ustawienia</a></li>
+              </ul>
+            </li>
+            <li class="wp-has-submenu wp-not-current-submenu menu-top toplevel_page_woocommerce-marketing menu-top-last"
+                id="toplevel_page_woocommerce-marketing">
+              <a href="admin.php?page=wc-admin&amp;path=/marketing"
+                 class="wp-has-submenu wp-not-current-submenu menu-top toplevel_page_woocommerce-marketing menu-top-last"
+                 aria-haspopup="true">
+                <div class="wp-menu-arrow">
+                  <div></div>
+                </div>
+                <div class="wp-menu-image dashicons-before dashicons-megaphone"><br /></div>
+                <div class="wp-menu-name">Marketing</div>
+              </a>
+              <ul class="wp-submenu wp-submenu-wrap">
+                <li class="wp-submenu-head" aria-hidden="true">Marketing</li>
+                <li class="wp-first-item"><a href="admin.php?page=wc-admin&amp;path=/marketing"
+                                             class="wp-first-item">Przegląd</a></li>
+                <li><a href="edit.php?post_type=shop_coupon">Kupony</a></li>
+              </ul>
+            </li>
+            <li class="wp-not-current-submenu wp-menu-separator" aria-hidden="true">
+              <div class="separator"></div>
+            </li>
+            <li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-appearance menu-top-first"
+                id="menu-appearance">
+              <a href="themes.php"
+                 class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-appearance menu-top-first"
+                 aria-haspopup="true">
+                <div class="wp-menu-arrow">
+                  <div></div>
+                </div>
+                <div class="wp-menu-image dashicons-before dashicons-admin-appearance"><br /></div>
+                <div class="wp-menu-name">Wygląd</div>
+              </a>
+              <ul class="wp-submenu wp-submenu-wrap">
+                <li class="wp-submenu-head" aria-hidden="true">Wygląd</li>
+                <li class="wp-first-item"><a href="themes.php" class="wp-first-item">Motywy</a></li>
+                <li class="hide-if-no-customize"><a
+                        href="customize.php?return=%2Fwp-admin%2Fedit.php%3Fpost_type%3Dshop_order"
+                        class="hide-if-no-customize">Dostosuj</a></li>
+                <li><a href="widgets.php">Widgety</a></li>
+                <li><a href="nav-menus.php">Menu</a></li>
+                <li class="hide-if-no-customize"><a
+                        href="customize.php?return=%2Fwp-admin%2Fedit.php%3Fpost_type%3Dshop_order&amp;autofocus%5Bcontrol%5D=background_image"
+                        class="hide-if-no-customize">Tło</a></li>
+                <li><a href="themes.php?page=custom-background">Tło</a></li>
+                <li><a href="theme-editor.php">Edytor motywu</a></li>
+              </ul>
+            </li>
+            <li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-plugins" id="menu-plugins">
+              <a href="plugins.php"
+                 class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-plugins"
+                 aria-haspopup="true">
+                <div class="wp-menu-arrow">
+                  <div></div>
+                </div>
+                <div class="wp-menu-image dashicons-before dashicons-admin-plugins"><br /></div>
+                <div class="wp-menu-name">Wtyczki <span class="update-plugins count-6"><span
+                        class="plugin-count">6</span></span></div>
+              </a>
+              <ul class="wp-submenu wp-submenu-wrap">
+                <li class="wp-submenu-head" aria-hidden="true">Wtyczki <span
+                        class="update-plugins count-6"><span class="plugin-count">6</span></span></li>
+                <li class="wp-first-item"><a href="plugins.php" class="wp-first-item">Zainstalowane
+                  wtyczki</a></li>
+                <li><a href="plugin-install.php">Dodaj nową</a></li>
+                <li><a href="plugin-editor.php">Edytor wtyczki</a></li>
+              </ul>
+            </li>
+            <li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-users" id="menu-users">
+              <a href="users.php" class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-users"
+                 aria-haspopup="true">
+                <div class="wp-menu-arrow">
+                  <div></div>
+                </div>
+                <div class="wp-menu-image dashicons-before dashicons-admin-users"><br /></div>
+                <div class="wp-menu-name">Użytkownicy</div>
+              </a>
+              <ul class="wp-submenu wp-submenu-wrap">
+                <li class="wp-submenu-head" aria-hidden="true">Użytkownicy</li>
+                <li class="wp-first-item"><a href="users.php" class="wp-first-item">Wszyscy
+                  użytkownicy</a></li>
+                <li><a href="user-new.php">Dodaj nowego</a></li>
+                <li><a href="profile.php">Twój profil</a></li>
+              </ul>
+            </li>
+            <li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-tools" id="menu-tools">
+              <a href="tools.php" class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-tools"
+                 aria-haspopup="true">
+                <div class="wp-menu-arrow">
+                  <div></div>
+                </div>
+                <div class="wp-menu-image dashicons-before dashicons-admin-tools"><br /></div>
+                <div class="wp-menu-name">Narzędzia</div>
+              </a>
+              <ul class="wp-submenu wp-submenu-wrap">
+                <li class="wp-submenu-head" aria-hidden="true">Narzędzia</li>
+                <li class="wp-first-item"><a href="tools.php" class="wp-first-item">Dostępne
+                  narzędzia</a></li>
+                <li><a href="import.php">Import</a></li>
+                <li><a href="export.php">Eksport</a></li>
+                <li><a href="site-health.php">Stan witryny</a></li>
+                <li><a href="export-personal-data.php">Eksportuj dane osobiste</a></li>
+                <li><a href="erase-personal-data.php">Usuń dane osobiste</a></li>
+                <li><a href="tools.php?page=action-scheduler">Planowane akcje</a></li>
+              </ul>
+            </li>
+            <li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-settings menu-top-last"
+                id="menu-settings">
+              <a href="options-general.php"
+                 class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-settings menu-top-last"
+                 aria-haspopup="true">
+                <div class="wp-menu-arrow">
+                  <div></div>
+                </div>
+                <div class="wp-menu-image dashicons-before dashicons-admin-settings"><br /></div>
+                <div class="wp-menu-name">Ustawienia</div>
+              </a>
+              <ul class="wp-submenu wp-submenu-wrap">
+                <li class="wp-submenu-head" aria-hidden="true">Ustawienia</li>
+                <li class="wp-first-item"><a href="options-general.php"
+                                             class="wp-first-item">Ogólne</a></li>
+                <li><a href="options-writing.php">Pisanie</a></li>
+                <li><a href="options-reading.php">Czytanie</a></li>
+                <li><a href="options-discussion.php">Dyskusja</a></li>
+                <li><a href="options-media.php">Media</a></li>
+                <li><a href="options-permalink.php">Bezpośrednie odnośniki</a></li>
+                <li><a href="options-privacy.php">Prywatność</a></li>
+              </ul>
+            </li>
+            <li id="collapse-menu" class="hide-if-no-js">
+              <button type="button" id="collapse-button" aria-label="Rozwiń Menu główne"
+                      aria-expanded="false"><span class="collapse-button-icon"
+                                                  aria-hidden="true"></span><span
+                      class="collapse-button-label">Zwiń menu</span></button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div id="wpcontent">
+        <div id="wpadminbar" class="nojq">
+          <div class="quicklinks" id="wp-toolbar" role="navigation" aria-label="Pasek narzędzi">
+            <ul id="wp-admin-bar-root-default" class="ab-top-menu">
+              <li id="wp-admin-bar-menu-toggle"><a class="ab-item" href="#" aria-expanded="false"><span
+                      class="ab-icon"></span><span class="screen-reader-text">Menu</span></a></li>
+              <li id="wp-admin-bar-wp-logo" class="menupop"><a class="ab-item" aria-haspopup="true"
+                                                                   href="http://toolsmg.pl/wp-admin/about.php"><span
+                      class="ab-icon"></span><span class="screen-reader-text">O WordPressie</span></a>
+                <div class="ab-sub-wrapper">
+                  <ul id="wp-admin-bar-wp-logo-default" class="ab-submenu">
+                    <li id="wp-admin-bar-about"><a class="ab-item"
+                                                   href="http://toolsmg.pl/wp-admin/about.php">O
+                      WordPressie</a></li>
+                  </ul>
+                  <ul id="wp-admin-bar-wp-logo-external" class="ab-sub-secondary ab-submenu">
+                    <li id="wp-admin-bar-wporg"><a class="ab-item"
+                                                   href="https://pl.wordpress.org/">WordPress.org</a></li>
+                    <li id="wp-admin-bar-documentation"><a class="ab-item"
+                                                           href="https://codex.wordpress.org/">Dokumentacja</a>
+                    </li>
+                    <li id="wp-admin-bar-support-forums"><a class="ab-item"
+                                                            href="https://pl.forums.wordpress.org/">Pomoc</a>
+                    </li>
+                    <li id="wp-admin-bar-feedback"><a class="ab-item"
+                                                      href="https://pl.forums.wordpress.org/forum/prosby-i-informacje-zwrotne">Uwagi</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li id="wp-admin-bar-site-name" class="menupop"><a class="ab-item" aria-haspopup="true"
+                                                                     href="http://toolsmg.pl/">Tools MG</a>
+                <div class="ab-sub-wrapper">
+                  <ul id="wp-admin-bar-site-name-default" class="ab-submenu">
+                    <li id="wp-admin-bar-view-site"><a class="ab-item" href="http://toolsmg.pl/">Odwiedź
+                      witrynę</a></li>
+                    <li id="wp-admin-bar-view-store"><a class="ab-item" href="http://toolsmg.pl/sklep/">Odwiedź
+                      sklep</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li id="wp-admin-bar-updates"><a class="ab-item"
+                                               href="http://toolsmg.pl/wp-admin/update-core.php"
+                                               title="1 aktualizacja WordPressa, 6 aktualizacji wtyczek, 3 aktualizacje motywów"><span
+                      class="ab-icon"></span><span class="ab-label">10</span><span
+                      class="screen-reader-text">1 aktualizacja WordPressa, 6 aktualizacji wtyczek, 3 aktualizacje motywów</span></a>
+              </li>
+              <li id="wp-admin-bar-comments"><a class="ab-item"
+                                                href="http://toolsmg.pl/wp-admin/edit-comments.php"><span
+                      class="ab-icon"></span><span class="ab-label awaiting-mod pending-count count-0"
+                                                       aria-hidden="true">0</span><span
+                      class="screen-reader-text comments-in-moderation-text">0 komentarzy oczekuje na moderację</span></a>
+              </li>
+              <li id="wp-admin-bar-new-content" class="menupop"><a class="ab-item" aria-haspopup="true"
+                                                                       href="http://toolsmg.pl/wp-admin/post-new.php"><span
+                      class="ab-icon"></span><span class="ab-label">Dodaj</span></a>
+                <div class="ab-sub-wrapper">
+                  <ul id="wp-admin-bar-new-content-default" class="ab-submenu">
+                    <li id="wp-admin-bar-new-post"><a class="ab-item"
+                                                      href="http://toolsmg.pl/wp-admin/post-new.php">Wpis</a>
+                    </li>
+                    <li id="wp-admin-bar-new-media"><a class="ab-item"
+                                                       href="http://toolsmg.pl/wp-admin/media-new.php">Medium</a>
+                    </li>
+                    <li id="wp-admin-bar-new-page"><a class="ab-item"
+                                                      href="http://toolsmg.pl/wp-admin/post-new.php?post_type=page">Strona</a>
+                    </li>
+                    <li id="wp-admin-bar-new-product"><a class="ab-item"
+                                                         href="http://toolsmg.pl/wp-admin/post-new.php?post_type=product">Produkt</a>
+                    </li>
+                    <li id="wp-admin-bar-new-shop_order"><a class="ab-item"
+                                                            href="http://toolsmg.pl/wp-admin/post-new.php?post_type=shop_order">Zamówienie</a>
+                    </li>
+                    <li id="wp-admin-bar-new-shop_coupon"><a class="ab-item"
+                                                             href="http://toolsmg.pl/wp-admin/post-new.php?post_type=shop_coupon">Kupon</a>
+                    </li>
+                    <li id="wp-admin-bar-new-user"><a class="ab-item"
+                                                      href="http://toolsmg.pl/wp-admin/user-new.php">Użytkownika</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+            <ul id="wp-admin-bar-top-secondary" class="ab-top-secondary ab-top-menu">
+              <li id="wp-admin-bar-my-account" class="menupop with-avatar">
+                <a class="ab-item"
+                   aria-haspopup="true"
+                   href="http://toolsmg.pl/wp-admin/profile.php">Witaj, <span
+                        class="display-name">root</span>
+                </a>
+                <div class="ab-sub-wrapper">
+                  <ul id="wp-admin-bar-user-actions" class="ab-submenu">
+                    <li id="wp-admin-bar-user-info"><a class="ab-item" tabIndex="-1"
+                                                       href="http://toolsmg.pl/wp-admin/profile.php">
+                                    <span
+                                            class="display-name">root</span></a></li>
+                    <li id="wp-admin-bar-edit-profile"><a class="ab-item"
+                                                          href="http://toolsmg.pl/wp-admin/profile.php">Edycja
+                      profilu</a></li>
+                    <li id="wp-admin-bar-logout"><a class="ab-item"
+                                                    href="http://toolsmg.pl/wp-login.php?action=logout&amp;_wpnonce=310555d3a2">Wyloguj
+                      się</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <a class="screen-reader-shortcut"
+             href="http://toolsmg.pl/wp-login.php?action=logout&amp;_wpnonce=310555d3a2">Wyloguj się</a>
+        </div>
+
+        <div id="woocommerce-embedded-root" class="">
+          <div class="woocommerce-layout">
+            <div class="woocommerce-layout__header">
+              <h1
+                      class="woocommerce-layout__header-heading css-12vx9xw-Text e15wbhsk0">Zamówienia</h1>
+            </div>
+            <div class="components-snackbar-list woocommerce-transient-notices components-notices__snackbar"></div>
+          </div>
+          <div></div>
+        </div>
+
+        <div id="wpbody" role="main">
+
+          <div id="wpbody-content">
+            <div id="screen-meta" class="metabox-prefs">
+
+              <div id="contextual-help-wrap" class="hidden" tabIndex="-1"
+                   aria-label="Zakładka pomocy kontekstowej">
+                <div id="contextual-help-back"></div>
+                <div id="contextual-help-columns">
+                  <div class="contextual-help-tabs">
+                    <ul>
+
+                      <li id="tab-link-woocommerce_support_tab" class="active">
+                        <a href="#tab-panel-woocommerce_support_tab"
+                           aria-controls="tab-panel-woocommerce_support_tab">
+                          Pomoc i wsparcie </a>
+                      </li>
+
+                      <li id="tab-link-woocommerce_bugs_tab">
+                        <a href="#tab-panel-woocommerce_bugs_tab"
+                           aria-controls="tab-panel-woocommerce_bugs_tab">
+                          Znalazłeś błąd? </a>
+                      </li>
+
+                      <li id="tab-link-woocommerce_onboard_tab">
+                        <a href="#tab-panel-woocommerce_onboard_tab"
+                           aria-controls="tab-panel-woocommerce_onboard_tab">
+                          Kreator konfiguracji </a>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="contextual-help-sidebar">
+                    <p><strong>Więcej informacji:</strong></p><p><a
+                          href="https://woocommerce.com/?utm_source=helptab&amp;utm_medium=product&amp;utm_content=about&amp;utm_campaign=woocommerceplugin"
+                          target="_blank">O WooCommerce</a></p><p><a href="https://wordpress.org/plugins/woocommerce/"
+                                                                     target="_blank">Projekt WordPress.org</a></p><p>
+                    <a href="https://github.com/woocommerce/woocommerce/" target="_blank">Projekt Github</a></p>
+                    <p><a
+                            href="https://woocommerce.com/storefront/?utm_source=helptab&amp;utm_medium=product&amp;utm_content=wcthemes&amp;utm_campaign=woocommerceplugin"
+                            target="_blank">Oficjalny motywy</a></p><p><a
+                          href="https://woocommerce.com/product-category/woocommerce-extensions/?utm_source=helptab&amp;utm_medium=product&amp;utm_content=wcextensions&amp;utm_campaign=woocommerceplugin"
+                          target="_blank">Oficjalne rozszerzenia</a></p></div>
+
+                  <div class="contextual-help-tabs-wrap">
+
+                    <div id="tab-panel-woocommerce_support_tab" class="help-tab-content active">
+                      <h2>Pomoc i wsparcie</h2><p>Jeśli potrzebujesz pomocy ze zrozumieniem, używaniem lub
+                      rozwijaniem WooCommerce, <a
+                              href="https://docs.woocommerce.com/documentation/plugins/woocommerce/?utm_source=helptab&amp;utm_medium=product&amp;utm_content=docs&amp;utm_campaign=woocommerceplugin">prosimy
+                        przeczytaj naszą dokumentację</a>. Znajdziesz w niej mnóstwo zasobów w tym kawałki
+                      kodu, poradniki i wiele więcej.</p><p>Aby uzyskać pomoc z kodem WooCommerce, skorzystaj
+                      z <a href="https://wordpress.org/support/plugin/woocommerce">forum społeczności</a>. Aby
+                      uzyskać pomoc dotyczącą rozszerzeń premium sprzedawanych na WooCommerce.com, <a
+                              href="https://woocommerce.com/my-account/create-a-ticket/?utm_source=helptab&amp;utm_medium=product&amp;utm_content=tickets&amp;utm_campaign=woocommerceplugin">poproś
+                        o wsparcie na WooCommerce.com</a>.</p><p>Zanim poprosisz o pomoc, polecamy
+                      sprawdzenie statusu systemu, aby zidentyfikować problemy z twoją konfiguracją.</p><p><a
+                            href="http://toolsmg.pl/wp-admin/admin.php?page=wc-status"
+                            class="button button-primary">Status systemu</a> <a
+                            href="https://wordpress.org/support/plugin/woocommerce" class="button">Forum
+                      społeczności</a> <a
+                            href="https://woocommerce.com/my-account/create-a-ticket/?utm_source=helptab&amp;utm_medium=product&amp;utm_content=tickets&amp;utm_campaign=woocommerceplugin"
+                            class="button">Wsparcie WooCommerce.com</a></p></div>
+
+                    <div id="tab-panel-woocommerce_bugs_tab" class="help-tab-content">
+                      <h2>Znalazłeś błąd?</h2><p>Jeśli znajdziesz błąd w WooCommerce możesz utworzyć
+                      zgłoszenie poprzez <a
+                              href="https://github.com/woocommerce/woocommerce/issues?state=open">GitHub</a>.
+                      Przeczytaj <a
+                              href="https://github.com/woocommerce/woocommerce/blob/master/.github/CONTRIBUTING.md">wskazówki
+                        dla współautorów</a> przed zgłoszeniem. Aby pomóc nam w rozwiązaniu problemu,
+                      prosimy o obszerne opisanie problemu i załączenie <a
+                              href="http://toolsmg.pl/wp-admin/admin.php?page=wc-status">statusu systemu</a>.</p>
+                      <p><a
+                              href="https://github.com/woocommerce/woocommerce/issues/new?template=4-Bug-report.md"
+                              class="button button-primary">Zgłoś błąd</a> <a
+                              href="http://toolsmg.pl/wp-admin/admin.php?page=wc-status" class="button">Status
+                        systemu</a></p></div>
+
+                    <div id="tab-panel-woocommerce_onboard_tab" class="help-tab-content">
+                      <h2>Wprowadzenie do WooCommerce</h2><h3>Kreator konfiguracji profilu</h3><p>Kliknij
+                      przycisk poniżej, jeśli chcesz użyć kreatora konfiguracji jeszcze raz.</p><p><a
+                            href="http://toolsmg.pl/wp-admin/admin.php?page=wc-admin&amp;path=/setup-wizard"
+                            class="button button-primary">Kreator konfiguracji</a></p><h3>Lista zadań</h3><p>If
+                      you need to enable or disable the task lists, please click on the button below.</p><p><a
+                            href="http://toolsmg.pl/wp-admin/admin.php?page=wc-admin&amp;reset_task_list=0"
+                            class="button button-primary">Wyłącz</a></p></div>
+                  </div>
+                </div>
+              </div>
+              <div id="screen-options-wrap" class="hidden" tabIndex="-1" aria-label="Karta „Opcje ekranu”">
+                <form id="adv-settings" method="post">
+                  <fieldset class="metabox-prefs">
+                    <legend>Kolumny</legend>
+                    <label><input class="hide-column-tog" name="order_number-hide" type="checkbox"
+                                  id="order_number-hide" value="order_number"
+                                  checked="checked" />Zamówienie</label>
+                    <label><input class="hide-column-tog" name="order_date-hide" type="checkbox"
+                                  id="order_date-hide" value="order_date" checked="checked" />Data</label>
+                    <label><input class="hide-column-tog" name="order_status-hide" type="checkbox"
+                                  id="order_status-hide" value="order_status" checked="checked" />Status</label>
+                    <label><input class="hide-column-tog" name="billing_address-hide" type="checkbox"
+                                  id="billing_address-hide" value="billing_address"
+                                  checked="checked" />Płatność</label>
+                    <label><input class="hide-column-tog" name="shipping_address-hide" type="checkbox"
+                                  id="shipping_address-hide" value="shipping_address" checked="checked" />Wyślij
+                      do</label>
+                    <label><input class="hide-column-tog" name="order_total-hide" type="checkbox"
+                                  id="order_total-hide" value="order_total" />Suma</label>
+                    <label><input class="hide-column-tog" name="wc_actions-hide" type="checkbox"
+                                  id="wc_actions-hide" value="wc_actions" />Akcje</label>
+                  </fieldset>
+                  <fieldset class="screen-options">
+                    <legend>Paginacja</legend>
+                    <label htmlFor="edit_shop_order_per_page">Liczba elementów na stronę:</label>
+                    <input type="number" step="1" min="1" max="999" class="screen-per-page"
+                           name="wp_screen_options[value]" id="edit_shop_order_per_page" maxLength="3"
+                           value="20" />
+                    <input type="hidden" name="wp_screen_options[option]" value="edit_shop_order_per_page" />
+                  </fieldset>
+                  <p class="submit"><input type="submit" name="screen-options-apply" id="screen-options-apply"
+                                               class="button button-primary" value="Zastosuj" /></p>
+                  <input type="hidden" id="screenoptionnonce" name="screenoptionnonce" value="b0d1e57588" />
+                </form>
+              </div>
+            </div>
+            <div id="screen-meta-links">
+              <div id="screen-options-link-wrap" class="hide-if-no-js screen-meta-toggle">
+                <button type="button" id="show-settings-link" class="button show-settings"
+                        aria-controls="screen-options-wrap" aria-expanded="false">Opcje ekranu
+                </button>
+              </div>
+              <div id="contextual-help-link-wrap" class="hide-if-no-js screen-meta-toggle">
+                <button type="button" id="contextual-help-link" class="button show-settings"
+                        aria-controls="contextual-help-wrap" aria-expanded="false">Pomoc
+                </button>
+              </div>
+            </div>
+            <div class="woocommerce-layout__notice-list-hide" id="wp__notice-list">
+              <div class="update-nag"><a href="https://wordpress.org/support/wordpress-version/version-5-6/">WordPress
+                5.6</a> jest już dostępny! <a href="http://toolsmg.pl/wp-admin/update-core.php"
+                                              aria-label="Proszę zaktualizować teraz WordPressa">Zaktualizuj
+                teraz</a>.
+              </div>
+            </div>
+            <div>
+              <div class="woocommerce-layout">
+                <div class="woocommerce-layout__primary" id="woocommerce-layout__primary">
+                  <div id="woocommerce-layout__notice-list" class="woocommerce-layout__notice-list"></div>
+                </div>
+              </div>
+            </div>
+            <div class="wrap">
+              <h1 class="wp-heading-inline">
+                Zamówienia</h1>
+
+              <a href="http://toolsmg.pl/wp-admin/post-new.php?post_type=shop_order" class="page-title-action">Dodaj
+                zamówienie</a>
+              <hr class="wp-header-end" />
+
+
+              <h2 class="screen-reader-text">Filtrowanie zamówień</h2>
+              <ul class="subsubsub">
+                <li class="all"><a href="edit.php?post_type=shop_order" class="current"
+                                       aria-current="page">Wszystkie <span class="count">(4)</span></a> |
+                </li>
+                <li class="wc-processing"><a
+                        href="edit.php?post_status=wc-processing&amp;post_type=shop_order">W trakcie
+                  realizacji <span class="count">(1)</span></a> |
+                </li>
+                <li class="wc-on-hold"><a
+                        href="edit.php?post_status=wc-on-hold&amp;post_type=shop_order">Wstrzymane <span
+                        class="count">(2)</span></a> |
+                </li>
+                <li class="wc-completed"><a
+                        href="edit.php?post_status=wc-completed&amp;post_type=shop_order">Zrealizowane <span
+                        class="count">(1)</span></a></li>
+              </ul>
+              <form id="posts-filter" method="get">
+
+                <p class="search-box">
+                  <label class="screen-reader-text" htmlFor="post-search-input">Szukaj zamówień:</label>
+                  <input type="search" id="post-search-input" name="s" value="" />
+                  <input type="submit" id="search-submit" class="button" value="Szukaj zamówień" /></p>
+
+                <input type="hidden" name="post_status" class="post_status_page" value="all" />
+                <input type="hidden" name="post_type" class="post_type_page" value="shop_order" />
+
+
+                <input type="hidden" id="_wpnonce" name="_wpnonce" value="9bef88dd07" /><input
+                      type="hidden" name="_wp_http_referer"
+                      value="/wp-admin/edit.php?post_type=shop_order" />
+                <div class="tablenav top">
+
+                  <div class="alignleft actions bulkactions">
+                    <label htmlFor="bulk-action-selector-top" class="screen-reader-text">Wybierz
+                      działanie na wielu</label><select name="action"
+                                                        id="bulk-action-selector-top">
+                    <option value="-1">Masowe działania</option>
+                    <option value="trash">Przenieś do Kosza</option>
+                    <option value="mark_processing">Zmień status na w trakcie realizacji
+                    </option>
+                    <option value="mark_on-hold">Zmień status na wstrzymane</option>
+                    <option value="mark_completed">Zmień status na zrealizowany</option>
+                  </select>
+                    <input type="submit" id="doaction" class="button action"
+                           value="Zastosuj" />
+                  </div>
+                  <div class="alignleft actions">
+                    <label htmlFor="filter-by-date" class="screen-reader-text">Filtruj po
+                      dacie</label>
+                    <select name="m" id="filter-by-date">
+                      <option selected="selected" value="0">Wszystkie daty</option>
+                      <option value="202101">Styczeń 2021</option>
+                    </select>
+                    <select class="wc-customer-search select2-hidden-accessible enhanced"
+                            name="_customer_user"
+                            data-placeholder="Filtruj po zarejestrowanych klientach"
+                            data-allow_clear="true" tabIndex="-1" aria-hidden="true">
+                      <option value="" selected="selected"></option>
+                      <option>
+                      </option>
+                    </select><span
+                          class="select2 select2-container select2-container--default" dir="ltr"
+                          style="width: 42px;"><span class="selection"><span
+                          class="select2-selection select2-selection--single" aria-haspopup="true"
+                          aria-expanded="false" tabIndex="0"
+                          aria-labelledby="select2-_customer_user-0c-container" role="combobox"><span
+                          class="select2-selection__rendered"
+                          id="select2-_customer_user-0c-container" role="textbox"
+                          aria-readonly="true"><span class="select2-selection__placeholder">Filtruj po zarejestrowanych klientach</span></span><span
+                          class="select2-selection__arrow" role="presentation"><b
+                          role="presentation"></b></span></span></span><span
+                          class="dropdown-wrapper" aria-hidden="true"></span></span>
+                    <input type="submit" name="filter_action" id="post-query-submit"
+                           class="button" value="Przefiltruj" /></div>
+                  <div class="tablenav-pages one-page"><span class="displaying-num">4 elementy</span>
+                    <span class="pagination-links"><span
+                            class="tablenav-pages-navspan button disabled"
+                            aria-hidden="true">«</span>
+<span class="tablenav-pages-navspan button disabled" aria-hidden="true">‹</span>
+<span class="paging-input"><label htmlFor="current-page-selector"
+                                      class="screen-reader-text">Bieżąca strona</label><input
+        class="current-page" id="current-page-selector" type="text" name="paged" value="1" size="1"
+        aria-describedby="table-paging" /><span class="tablenav-paging-text"> z <span
+        class="total-pages">1</span></span></span>
+<span class="tablenav-pages-navspan button disabled" aria-hidden="true">›</span>
+<span class="tablenav-pages-navspan button disabled" aria-hidden="true">»</span></span></div>
+                  <br class="clear" />
+                </div>
+                <h2 class="screen-reader-text">Lista zamówień</h2>
+                <table class="wp-list-table widefat fixed striped posts">
+                  <thead>
+                  <tr>
+                    <td id="cb" class="manage-column column-cb check-column"><label
+                            class="screen-reader-text" htmlFor="cb-select-all-1">Wybierz
+                      wszystko</label><input id="cb-select-all-1" type="checkbox" /></td>
+                    <th scope="col" id="order_number"
+                        class="manage-column column-order_number column-primary sortable desc">
+                      <a href="http://toolsmg.pl/wp-admin/edit.php?post_type=shop_order&amp;orderby=ID&amp;order=asc"><span>Zamówienie</span><span
+                              class="sorting-indicator"></span></a></th>
+                    <th scope="col" id="order_date"
+                        class="manage-column column-order_date sortable desc"><a
+                            href="http://toolsmg.pl/wp-admin/edit.php?post_type=shop_order&amp;orderby=date&amp;order=asc"><span>Data</span><span
+                            class="sorting-indicator"></span></a></th>
+                    <th scope="col" id="order_status"
+                        class="manage-column column-order_status">Status
+                    </th>
+                    <th scope="col" id="billing_address"
+                        class="manage-column column-billing_address">Płatność
+                    </th>
+                    <th scope="col" id="shipping_address"
+                        class="manage-column column-shipping_address">Wyślij do
+                    </th>
+                    <th scope="col" id="order_total"
+                        class="manage-column column-order_total hidden sortable desc"><a
+                            href="http://toolsmg.pl/wp-admin/edit.php?post_type=shop_order&amp;orderby=order_total&amp;order=asc"><span>Suma</span><span
+                            class="sorting-indicator"></span></a></th>
+                    <th scope="col" id="wc_actions"
+                        class="manage-column column-wc_actions hidden">Akcje
+                    </th>
+                  </tr>
+                  </thead>
+
+                  <tbody id="the-list">
+                  <tr id="post-27"
+                      class="iedit author-self level-0 post-27 type-shop_order status-wc-on-hold post-password-required hentry">
+                    <th scope="row" class="check-column"><label
+                            class="screen-reader-text" htmlFor="cb-select-27">
+                      Wybierz Order – 21 stycznia, 2021 @ 01:07 PM </label>
+                      <input id="cb-select-27" type="checkbox" name="post[]" value="27" />
+                      <div class="locked-indicator">
+                                                        <span class="locked-indicator-icon"
+                                                              aria-hidden="true"></span>
+                        <span class="screen-reader-text">
+				“Order – 21 stycznia, 2021 @ 01:07 PM” jest zablokowany				</span>
+                      </div>
+                    </th>
+                    <td class="order_number column-order_number has-row-actions column-primary"
+                        data-colname="Zamówienie"><a href="#" class="order-preview"
+                                                     data-order-id="27"
+                                                     title="Zobacz">Zobacz</a><a
+                            href="http://toolsmg.pl/wp-admin/post.php?post=27&amp;action=edit"
+                            class="order-view"><strong>#27 łUKASZ Martyn</strong></a></td>
+                    <td class="order_date column-order_date" data-colname="Data">
+                      <time dateTime="2021-01-21T13:07:20+00:00"
+                            title="21 stycznia 2021 13:07">21.01.2021
+                      </time>
+                    </td>
+                    <td class="order_status column-order_status" data-colname="Status">
+                      <mark class="order-status status-on-hold tips"><span>Wstrzymane (oczekujące na płatność)</span>
+                      </mark>
+                    </td>
+                    <td class="billing_address column-billing_address"
+                        data-colname="Płatność">STG, łUKASZ Martyn, warszawska, 12-222 Pisz<span
+                            class="description">przez Przelew bankowy</span></td>
+                    <td class="shipping_address column-shipping_address"
+                        data-colname="Wyślij do">–
+                    </td>
+                    <td class="order_total column-order_total hidden" data-colname="Suma">
+                                                <span class="tips"><span
+                                                        class="woocommerce-Price-amount amount"><span
+                                                        class="woocommerce-Price-currencySymbol">€</span>158,00</span></span>
+                    </td>
+                    <td class="wc_actions column-wc_actions hidden" data-colname="Akcje"><p>
+                      <a class="button wc-action-button wc-action-button-processing processing"
+                         href="http://toolsmg.pl/wp-admin/admin-ajax.php?action=woocommerce_mark_order_status&amp;status=processing&amp;order_id=27&amp;_wpnonce=666508428e"
+                         aria-label="W trakcie realizacji">W trakcie realizacji</a><a
+                            class="button wc-action-button wc-action-button-complete complete"
+                            href="http://toolsmg.pl/wp-admin/admin-ajax.php?action=woocommerce_mark_order_status&amp;status=completed&amp;order_id=27&amp;_wpnonce=666508428e"
+                            aria-label="Zrealizowane">Zrealizowane</a></p></td>
+                  </tr>
+                  <tr id="post-26"
+                      class="iedit author-self level-0 post-26 type-shop_order status-wc-on-hold post-password-required hentry">
+                    <th scope="row" class="check-column"><label
+                            class="screen-reader-text" htmlFor="cb-select-26">
+                      Wybierz Order – 12 stycznia, 2021 @ 01:30 PM </label>
+                      <input id="cb-select-26" type="checkbox" name="post[]" value="26" />
+                      <div class="locked-indicator">
+                                                        <span class="locked-indicator-icon"
+                                                              aria-hidden="true"></span>
+                        <span class="screen-reader-text">
+				“Order – 12 stycznia, 2021 @ 01:30 PM” jest zablokowany				</span>
+                      </div>
+                    </th>
+                    <td class="order_number column-order_number has-row-actions column-primary"
+                        data-colname="Zamówienie"><a href="#" class="order-preview"
+                                                     data-order-id="26"
+                                                     title="Zobacz">Zobacz</a><a
+                            href="http://toolsmg.pl/wp-admin/post.php?post=26&amp;action=edit"
+                            class="order-view"><strong>#26 1 1</strong></a></td>
+                    <td class="order_date column-order_date" data-colname="Data">
+                      <time dateTime="2021-01-12T13:30:48+00:00"
+                            title="12 stycznia 2021 13:30">12.01.2021
+                      </time>
+                    </td>
+                    <td class="order_status column-order_status" data-colname="Status">
+                      <mark class="order-status status-on-hold tips"><span>Wstrzymane (oczekujące na płatność)</span>
+                      </mark>
+                    </td>
+                    <td class="billing_address column-billing_address"
+                        data-colname="Płatność">1, 1 1, 1, 12-222 1<span
+                            class="description">przez Przelew bankowy</span></td>
+                    <td class="shipping_address column-shipping_address"
+                        data-colname="Wyślij do"><a target="_blank"
+                                                    href="https://maps.google.com/maps?&amp;q=1%2C%20%2C%201%2C%20%2C%2012-222%2C%20PL&amp;z=16">test,
+                      1 1, 1, 12-222 1</a></td>
+                    <td class="order_total column-order_total hidden" data-colname="Suma">
+                                                <span class="tips"><span
+                                                        class="woocommerce-Price-amount amount"><span
+                                                        class="woocommerce-Price-currencySymbol">€</span>24,00</span></span>
+                    </td>
+                    <td class="wc_actions column-wc_actions hidden" data-colname="Akcje"><p>
+                      <a class="button wc-action-button wc-action-button-processing processing"
+                         href="http://toolsmg.pl/wp-admin/admin-ajax.php?action=woocommerce_mark_order_status&amp;status=processing&amp;order_id=26&amp;_wpnonce=666508428e"
+                         aria-label="W trakcie realizacji">W trakcie realizacji</a><a
+                            class="button wc-action-button wc-action-button-complete complete"
+                            href="http://toolsmg.pl/wp-admin/admin-ajax.php?action=woocommerce_mark_order_status&amp;status=completed&amp;order_id=26&amp;_wpnonce=666508428e"
+                            aria-label="Zrealizowane">Zrealizowane</a></p></td>
+                  </tr>
+                  <tr id="post-25"
+                      class="iedit author-self level-0 post-25 type-shop_order status-wc-processing post-password-required hentry">
+                    <th scope="row" class="check-column"><label
+                            class="screen-reader-text" htmlFor="cb-select-25">
+                      Wybierz Order – 12 stycznia, 2021 @ 01:30 PM </label>
+                      <input id="cb-select-25" type="checkbox" name="post[]" value="25" />
+                      <div class="locked-indicator">
+                                                        <span class="locked-indicator-icon"
+                                                              aria-hidden="true"></span>
+                        <span class="screen-reader-text">
+				“Order – 12 stycznia, 2021 @ 01:30 PM” jest zablokowany				</span>
+                      </div>
+                    </th>
+                    <td class="order_number column-order_number has-row-actions column-primary"
+                        data-colname="Zamówienie"><a href="#" class="order-preview"
+                                                     data-order-id="25"
+                                                     title="Zobacz">Zobacz</a><a
+                            href="http://toolsmg.pl/wp-admin/post.php?post=25&amp;action=edit"
+                            class="order-view"><strong>#25 1 1</strong></a></td>
+                    <td class="order_date column-order_date" data-colname="Data">
+                      <time dateTime="2021-01-12T13:30:08+00:00"
+                            title="12 stycznia 2021 13:30">12.01.2021
+                      </time>
+                    </td>
+                    <td class="order_status column-order_status" data-colname="Status">
+                      <mark class="order-status status-processing tips"><span>W trakcie realizacji</span>
+                      </mark>
+                    </td>
+                    <td class="billing_address column-billing_address"
+                        data-colname="Płatność">1, 1 1, 1, 12-222 1<span
+                            class="description">przez Przelew bankowy</span></td>
+                    <td class="shipping_address column-shipping_address"
+                        data-colname="Wyślij do">–
+                    </td>
+                    <td class="order_total column-order_total hidden" data-colname="Suma">
+                                                <span class="tips"><span
+                                                        class="woocommerce-Price-amount amount"><span
+                                                        class="woocommerce-Price-currencySymbol">€</span>55,00</span></span>
+                    </td>
+                    <td class="wc_actions column-wc_actions hidden" data-colname="Akcje"><p>
+                      <a class="button wc-action-button wc-action-button-complete complete"
+                         href="http://toolsmg.pl/wp-admin/admin-ajax.php?action=woocommerce_mark_order_status&amp;status=completed&amp;order_id=25&amp;_wpnonce=666508428e"
+                         aria-label="Zrealizowane">Zrealizowane</a></p></td>
+                  </tr>
+                  <tr id="post-24"
+                      class="iedit author-self level-0 post-24 type-shop_order status-wc-completed post-password-required hentry">
+                    <th scope="row" class="check-column"><label
+                            class="screen-reader-text" htmlFor="cb-select-24">
+                      Wybierz Order – 12 stycznia, 2021 @ 01:28 PM </label>
+                      <input id="cb-select-24" type="checkbox" name="post[]" value="24" />
+                      <div class="locked-indicator">
+                                                        <span class="locked-indicator-icon"
+                                                              aria-hidden="true"></span>
+                        <span class="screen-reader-text">
+				“Order – 12 stycznia, 2021 @ 01:28 PM” jest zablokowany				</span>
+                      </div>
+                    </th>
+                    <td class="order_number column-order_number has-row-actions column-primary"
+                        data-colname="Zamówienie"><a href="#" class="order-preview"
+                                                     data-order-id="24"
+                                                     title="Zobacz">Zobacz</a><a
+                            href="http://toolsmg.pl/wp-admin/post.php?post=24&amp;action=edit"
+                            class="order-view"><strong>#24 1 1</strong></a></td>
+                    <td class="order_date column-order_date" data-colname="Data">
+                      <time dateTime="2021-01-12T13:28:57+00:00"
+                            title="12 stycznia 2021 13:28">12.01.2021
+                      </time>
+                    </td>
+                    <td class="order_status column-order_status" data-colname="Status">
+                      <mark class="order-status status-completed tips">
+                        <span>Zrealizowane</span></mark>
+                    </td>
+                    <td class="billing_address column-billing_address"
+                        data-colname="Płatność">1, 1 1, 1, 12-222 1<span
+                            class="description">przez Przelew bankowy</span></td>
+                    <td class="shipping_address column-shipping_address"
+                        data-colname="Wyślij do">–
+                    </td>
+                    <td class="order_total column-order_total hidden" data-colname="Suma">
+                                                <span class="tips"><span
+                                                        class="woocommerce-Price-amount amount"><span
+                                                        class="woocommerce-Price-currencySymbol">€</span>110,00</span></span>
+                    </td>
+                    <td class="wc_actions column-wc_actions hidden" data-colname="Akcje">
+                      <p></p></td>
+                  </tr>
+                  </tbody>
+
+                  <tfoot>
+                  <tr>
+                    <td class="manage-column column-cb check-column"><label
+                            class="screen-reader-text" htmlFor="cb-select-all-2">Wybierz
+                      wszystko</label><input id="cb-select-all-2" type="checkbox" /></td>
+                    <th scope="col"
+                        class="manage-column column-order_number column-primary sortable desc">
+                      <a href="http://toolsmg.pl/wp-admin/edit.php?post_type=shop_order&amp;orderby=ID&amp;order=asc"><span>Zamówienie</span><span
+                              class="sorting-indicator"></span></a></th>
+                    <th scope="col" class="manage-column column-order_date sortable desc"><a
+                            href="http://toolsmg.pl/wp-admin/edit.php?post_type=shop_order&amp;orderby=date&amp;order=asc"><span>Data</span><span
+                            class="sorting-indicator"></span></a></th>
+                    <th scope="col" class="manage-column column-order_status">Status</th>
+                    <th scope="col" class="manage-column column-billing_address">Płatność
+                    </th>
+                    <th scope="col" class="manage-column column-shipping_address">Wyślij
+                      do
+                    </th>
+                    <th scope="col"
+                        class="manage-column column-order_total hidden sortable desc"><a
+                            href="http://toolsmg.pl/wp-admin/edit.php?post_type=shop_order&amp;orderby=order_total&amp;order=asc"><span>Suma</span><span
+                            class="sorting-indicator"></span></a></th>
+                    <th scope="col" class="manage-column column-wc_actions hidden">Akcje
+                    </th>
+                  </tr>
+                  </tfoot>
+
+                </table>
+                <div class="tablenav bottom">
+
+                  <div class="alignleft actions bulkactions">
+                    <label htmlFor="bulk-action-selector-bottom" class="screen-reader-text">Wybierz
+                      działanie na wielu</label><select name="action2"
+                                                        id="bulk-action-selector-bottom">
+                    <option value="-1">Masowe działania</option>
+                    <option value="trash">Przenieś do Kosza</option>
+                    <option value="mark_processing">Zmień status na w trakcie realizacji
+                    </option>
+                    <option value="mark_on-hold">Zmień status na wstrzymane</option>
+                    <option value="mark_completed">Zmień status na zrealizowany</option>
+                  </select>
+                    <input type="submit" id="doaction2" class="button action"
+                           value="Zastosuj" />
+                  </div>
+                  <div class="alignleft actions">
+                  </div>
+                  <div class="tablenav-pages one-page"><span class="displaying-num">4 elementy</span>
+                    <span class="pagination-links"><span
+                            class="tablenav-pages-navspan button disabled"
+                            aria-hidden="true">«</span>
+<span class="tablenav-pages-navspan button disabled" aria-hidden="true">‹</span>
+<span class="screen-reader-text">Bieżąca strona</span><span id="table-paging" class="paging-input"><span
+                              class="tablenav-paging-text">1 z <span
+                              class="total-pages">1</span></span></span>
+<span class="tablenav-pages-navspan button disabled" aria-hidden="true">›</span>
+<span class="tablenav-pages-navspan button disabled" aria-hidden="true">»</span></span></div>
+                  <br class="clear" />
+                </div>
+
+              </form>
+
+
+              <form method="get">
+                <table style="display: none">
+                  <tbody id="inlineedit">
+                  <tr id="inline-edit"
+                      class="inline-edit-row inline-edit-row-page quick-edit-row quick-edit-row-page inline-edit-shop_order"
+                      style="display: none">
+                    <td colSpan="6" class="colspanchange">
+
+                      <fieldset class="inline-edit-col-left">
+                        <legend class="inline-edit-legend">Szybka edycja</legend>
+                        <div class="inline-edit-col">
+
+
+                          <label>
+                            <span class="title">Tytuł</span>
+                            <span class="input-text-wrap"><input type="text" name="post_title"
+                                                                     class="ptitle"
+                                                                     value="" /></span>
+                          </label>
+
+
+                          <fieldset class="inline-edit-date">
+                            <legend><span class="title">Data</span></legend>
+                            <div class="timestamp-wrap"><label><span
+                                    class="screen-reader-text">Dzień</span><input type="text"
+                                                                                      name="jj"
+                                                                                      value="21"
+                                                                                      size="2"
+                                                                                      maxLength="2"
+                                                                                      autoComplete="off" /></label>-<label><span
+                                    class="screen-reader-text">Miesiąc</span><select name="mm">
+                              <option value="01" data-text="Sty" selected="selected">01</option>
+                              <option value="02" data-text="Lut">02</option>
+                              <option value="03" data-text="Mar">03</option>
+                              <option value="04" data-text="Kwi">04</option>
+                              <option value="05" data-text="Maj">05</option>
+                              <option value="06" data-text="Cze">06</option>
+                              <option value="07" data-text="Lip">07</option>
+                              <option value="08" data-text="Sie">08</option>
+                              <option value="09" data-text="Wrz">09</option>
+                              <option value="10" data-text="Paź">10</option>
+                              <option value="11" data-text="Lis">11</option>
+                              <option value="12" data-text="Gru">12</option>
+                            </select></label>-<label><span class="screen-reader-text">Rok</span><input
+                                    type="text" name="aa" value="2021" size="4" maxLength="4"
+                                    autoComplete="off" /></label> o <label><span
+                                    class="screen-reader-text">Godzina</span><input type="text"
+                                                                                        name="hh"
+                                                                                        value="13"
+                                                                                        size="2"
+                                                                                        maxLength="2"
+                                                                                        autoComplete="off" /></label>:<label><span
+                                    class="screen-reader-text">Minuta</span><input type="text"
+                                                                                       name="mn"
+                                                                                       value="07"
+                                                                                       size="2"
+                                                                                       maxLength="2"
+                                                                                       autoComplete="off" /></label>
+                            </div>
+                            <input type="hidden" id="ss" name="ss" value="20" /></fieldset>
+                          <br class="clear" />
+
+
+                          <div class="inline-edit-group wp-clearfix">
+                            <label class="alignleft">
+                              <span class="title">Hasło</span>
+                              <span class="input-text-wrap"><input type="text"
+                                                                       name="post_password"
+                                                                       class="inline-edit-password-input"
+                                                                       value="" /></span>
+                            </label>
+
+                            <span class="alignleft inline-edit-or">
+							–LUB–						</span>
+                            <label class="alignleft inline-edit-private">
+                              <input type="checkbox" name="keep_private" value="private" />
+                              <span class="checkbox-title">Prywatne</span>
+                            </label>
+                          </div>
+
+
+                        </div>
+                      </fieldset>
+
+
+                      <fieldset class="inline-edit-col-right">
+                        <div class="inline-edit-col">
+
+
+                          <div class="inline-edit-group wp-clearfix">
+
+
+                            <label class="alignleft">
+                              <input type="checkbox" name="comment_status" value="open" />
+                              <span class="checkbox-title">Zezwól na komentarze</span>
+                            </label>
+
+
+                          </div>
+
+
+                          <div class="inline-edit-group wp-clearfix">
+
+                            <label class="inline-edit-status alignleft">
+                              <span class="title">Stan</span>
+                              <select name="_status">
+
+                                <option value="publish">Opublikowany</option>
+                                <option value="future">Zaplanowano</option>
+
+                                <option value="pending">Oczekuje na przegląd</option>
+                                <option value="draft">Szkic</option>
+                              </select>
+                            </label>
+
+
+                          </div>
+
+
+                        </div>
+                      </fieldset>
+
+
+                      <div class="submit inline-edit-save">
+                        <button type="button" class="button cancel alignleft">Anuluj</button>
+
+                        <input type="hidden" id="_inline_edit" name="_inline_edit" value="2b4829f807" />
+                        <button type="button"
+                                class="button button-primary save alignright">Zaktualizuj
+                        </button>
+                        <span class="spinner"></span>
+
+                        <input type="hidden" name="post_view" value="list" />
+                        <input type="hidden" name="screen" value="edit-shop_order" />
+                        <input type="hidden" name="post_author" value="" />
+                        <br class="clear" />
+
+                        <div
+                                class="notice notice-error notice-alt inline hidden">
+                          <p class="error"></p>
+                        </div>
+                      </div>
+
+                    </td>
+                  </tr>
+
+                  <tr id="bulk-edit"
+                      class="inline-edit-row inline-edit-row-page bulk-edit-row bulk-edit-row-page bulk-edit-shop_order"
+                      style="display: none">
+                    <td colSpan="6" class="colspanchange">
+
+                      <fieldset class="inline-edit-col-left">
+                        <legend class="inline-edit-legend">Masowa edycja</legend>
+                        <div class="inline-edit-col">
+
+
+                          <div id="bulk-title-div">
+                            <div id="bulk-titles"></div>
+                          </div>
+
+
+                        </div>
+                      </fieldset>
+
+
+                      <fieldset class="inline-edit-col-right">
+                        <div class="inline-edit-col">
+
+
+                          <div class="inline-edit-group wp-clearfix">
+
+
+                            <label class="alignleft">
+                              <span class="title">Komentarze</span>
+                              <select name="comment_status">
+                                <option value="">— bez zmian —</option>
+                                <option value="open">Zezwól</option>
+                                <option value="closed">Nie zezwalaj</option>
+                              </select>
+                            </label>
+
+
+                          </div>
+
+
+                          <div class="inline-edit-group wp-clearfix">
+
+                            <label class="inline-edit-status alignleft">
+                              <span class="title">Stan</span>
+                              <select name="_status">
+                                <option value="-1">— bez zmian —</option>
+
+                                <option value="publish">Opublikowany</option>
+
+                                <option value="private">Prywatne</option>
+
+                                <option value="pending">Oczekuje na przegląd</option>
+                                <option value="draft">Szkic</option>
+                              </select>
+                            </label>
+
+
+                          </div>
+
+
+                        </div>
+                      </fieldset>
+
+
+                      <div class="submit inline-edit-save">
+                        <button type="button" class="button cancel alignleft">Anuluj</button>
+
+                        <input type="submit" name="bulk_edit" id="bulk_edit"
+                               class="button button-primary alignright" value="Zaktualizuj" />
+                        <input type="hidden" name="post_view" value="list" />
+                        <input type="hidden" name="screen" value="edit-shop_order" />
+                        <br class="clear" />
+
+                        <div class="notice notice-error notice-alt inline hidden" >
+                          <p class="error"></p>
+                        </div>
+                      </div>
+
+                    </td>
+                  </tr>
+
+                  </tbody>
+                </table>
+              </form>
+
+              <div id="ajax-response"></div>
+              <br class="clear" />
+            </div>
+
+
+            <div class="clear"></div>
+          </div>
+          <!-- wpbody-content -->
+          <div class="clear"></div>
+        </div>
+        <!-- wpbody -->
+        <div class="clear"></div>
+      </div>
+      <div id="wpfooter" ></div>
+
+      <div id="plugin" ></div>
+
+<!-- PLUGIN -->
+
+
+      <link href='/wp-content/plugins/WP_Plugin_Print_Shop_Order/css/main.css' rel="stylesheet" media="all" />
+      <a class="button getDataToPrintByKES order-status status-on-hold status-processing" href="#">Wersja do
+        Druku</a>
+      <button class="closePrintByKES modal-close modal-close-link dashicons dashicons-no-alt"
+              title="Zamknij Podgląd Wydruku">
+        <span class="screen-reader-text">Zamknij Podgląd Wydruku</span>
+      </button>
+      <div id="PrintBoxKes"></div>
+      <script src='/wp-content/plugins/WP_Plugin_Print_Shop_Order/js/main.js' type="application/javascript"><</script>
+
+<!-- END PLUGIN -->
+    </div>
+
+
+  <script id="tmpl-wc-modal-view-order-24" type="text/html">
+    <div class="wc-backbone-modal wc-order-preview">
+      <div class="wc-backbone-modal-content">
+        <section class="wc-backbone-modal-main" role="main">
+          <header class="wc-backbone-modal-header">
+            <mark class="order-status status-completed"><span>Zrealizowane</span></mark>
+            <h1>Zamówienie: #24</h1>
+            <button class="modal-close modal-close-link dashicons dashicons-no-alt">
+              <span class="screen-reader-text">Zamknij okno modalne</span>
+            </button>
+          </header>
+          <article>
+
+            <div class="wc-order-preview-addresses">
+              <div class="wc-order-preview-address">
+                <h2>Dane płatności</h2>
+                1<br>1 1<br>1<br>12-222 1
+
+
+                <strong>E-mail</strong>
+                <a href="mailto:l.m.martyn@gmail.com">l.m.martyn@gmail.com</a>
+
+
+
+                <strong>Telefon</strong>
+                <a href="tel:1">1</a>
+
+
+
+                <strong>Płatność przez</strong>
+                Przelew bankowy
+
+              </div>
+
+
+
+            </div>
+
+
+            <div class="wc-order-preview-table-wrapper">
+              <table class="wc-order-preview-table" cellspacing="0">
+                <thead>
+                <tr><th class="wc-order-preview-table__column--product">Produkt</th><th class="wc-order-preview-table__column--quantity">Ilość</th><th class="wc-order-preview-table__column--total">Suma</th>
+                </tr>
+                </thead>
+                <tbody><tr class="wc-order-preview-table__item wc-order-preview-table__item--1"><td class="wc-order-preview-table__column--product">test<div class="wc-order-item-sku"></div></td><td class="wc-order-preview-table__column--quantity">2</td><td class="wc-order-preview-table__column--total"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">€</span>110,00</bdi></span></td></tr>
+                </tbody>
+              </table>
+            </div>
+
+          </article>
+          <footer>
+            <div class="inner">
+
+
+              <a class="button button-primary button-large" aria-label="Edytuj zamówienie" href="http://toolsmg.pl/wp-admin/post.php?action=edit&amp;post=24">Edytuj</a>
+            </div>
+          </footer>
+        </section>
+      </div>
+    </div>
+    <div class="wc-backbone-modal-backdrop modal-close"></div>
+  </script>
+  <script id="tmpl-wc-modal-view-order-26" type="text/html">
+    <div class="wc-backbone-modal wc-order-preview">
+      <div class="wc-backbone-modal-content">
+        <section class="wc-backbone-modal-main" role="main">
+          <header class="wc-backbone-modal-header">
+            <mark class="order-status status-on-hold"><span>Wstrzymane (oczekujące na płatność)</span></mark>
+            <h1>Zamówienie: #26</h1>
+            <button class="modal-close modal-close-link dashicons dashicons-no-alt">
+              <span class="screen-reader-text">Zamknij okno modalne</span>
+            </button>
+          </header>
+          <article>
+
+            <div class="wc-order-preview-addresses">
+              <div class="wc-order-preview-address">
+                <h2>Dane płatności</h2>
+                1<br>1 1<br>1<br>12-222 1
+
+
+                <strong>E-mail</strong>
+                <a href="mailto:l.m.martyn@gmail.com">l.m.martyn@gmail.com</a>
+
+
+
+                <strong>Telefon</strong>
+                <a href="tel:1">1</a>
+
+
+
+                <strong>Płatność przez</strong>
+                Przelew bankowy
+
+              </div>
+
+
+
+              <div class="wc-order-preview-note">
+                <strong>Notatka</strong>
+                ciekawe że
+              </div>
+
+            </div>
+
+
+            <div class="wc-order-preview-table-wrapper">
+              <table class="wc-order-preview-table" cellspacing="0">
+                <thead>
+                <tr><th class="wc-order-preview-table__column--product">Produkt</th><th class="wc-order-preview-table__column--quantity">Ilość</th><th class="wc-order-preview-table__column--total">Suma</th>
+                </tr>
+                </thead>
+                <tbody><tr class="wc-order-preview-table__item wc-order-preview-table__item--3"><td class="wc-order-preview-table__column--product">jsd<div class="wc-order-item-sku"></div></td><td class="wc-order-preview-table__column--quantity">2</td><td class="wc-order-preview-table__column--total"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">€</span>24,00</bdi></span></td></tr>
+                </tbody>
+              </table>
+            </div>
+
+          </article>
+          <footer>
+            <div class="inner">
+              <div class="wc-action-button-group"><label>Zmień status:</label> <span class="wc-action-button-group__items"><a class="button wc-action-button wc-action-button-processing processing" href="http://toolsmg.pl/wp-admin/admin-ajax.php?action=woocommerce_mark_order_status&amp;status=processing&amp;order_id=26&amp;_wpnonce=e80bf5346d" aria-label="Zmień status na w trakcie realizacji" title="Zmień status na w trakcie realizacji">W trakcie realizacji</a><a class="button wc-action-button wc-action-button-complete complete" href="http://toolsmg.pl/wp-admin/admin-ajax.php?action=woocommerce_mark_order_status&amp;status=completed&amp;order_id=26&amp;_wpnonce=e80bf5346d" aria-label="Zmień status na zrealizowane" title="Zmień status na zrealizowane">Zrealizowane</a></span></div>
+
+              <a class="button button-primary button-large" aria-label="Edytuj zamówienie" href="http://toolsmg.pl/wp-admin/post.php?action=edit&amp;post=26">Edytuj</a>
+            </div>
+          </footer>
+        </section>
+      </div>
+    </div>
+    <div class="wc-backbone-modal-backdrop modal-close"></div>
+  </script>
+  <script id="tmpl-wc-modal-view-order-27" type="text/html">
+    <div class="wc-backbone-modal wc-order-preview">
+      <div class="wc-backbone-modal-content">
+        <section class="wc-backbone-modal-main" role="main">
+          <header class="wc-backbone-modal-header">
+            <mark class="order-status status-on-hold"><span>Wstrzymane (oczekujące na płatność)</span></mark>
+            <h1>Zamówienie: #27</h1>
+            <button class="modal-close modal-close-link dashicons dashicons-no-alt">
+              <span class="screen-reader-text">Zamknij okno modalne</span>
+            </button>
+          </header>
+          <article>
+
+            <div class="wc-order-preview-addresses">
+              <div class="wc-order-preview-address">
+                <h2>Dane płatności</h2>
+                STG<br>łUKASZ Martyn<br>warszawska<br>12-222 Pisz
+
+
+                <strong>E-mail</strong>
+                <a href="mailto:l.m.martyn@gmail.com">l.m.martyn@gmail.com</a>
+
+
+
+                <strong>Telefon</strong>
+                <a href="tel:12345678">12345678</a>
+
+
+
+                <strong>Płatność przez</strong>
+                Przelew bankowy
+
+              </div>
+
+
+
+            </div>
+
+
+            <div class="wc-order-preview-table-wrapper">
+              <table class="wc-order-preview-table" cellspacing="0">
+                <thead>
+                <tr><th class="wc-order-preview-table__column--product">Produkt</th><th class="wc-order-preview-table__column--quantity">Ilość</th><th class="wc-order-preview-table__column--total">Suma</th>
+                </tr>
+                </thead>
+                <tbody><tr class="wc-order-preview-table__item wc-order-preview-table__item--4"><td class="wc-order-preview-table__column--product">test<div class="wc-order-item-sku"></div></td><td class="wc-order-preview-table__column--quantity">2</td><td class="wc-order-preview-table__column--total"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">€</span>110,00</bdi></span></td></tr><tr class="wc-order-preview-table__item wc-order-preview-table__item--5"><td class="wc-order-preview-table__column--product">jsd<div class="wc-order-item-sku"></div></td><td class="wc-order-preview-table__column--quantity">2</td><td class="wc-order-preview-table__column--total"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">€</span>24,00</bdi></span></td></tr><tr class="wc-order-preview-table__item wc-order-preview-table__item--6"><td class="wc-order-preview-table__column--product">jsd (Kopia)<div class="wc-order-item-sku"></div></td><td class="wc-order-preview-table__column--quantity">2</td><td class="wc-order-preview-table__column--total"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">€</span>24,00</bdi></span></td></tr>
+                </tbody>
+              </table>
+            </div>
+
+          </article>
+          <footer>
+            <div class="inner">
+              <div class="wc-action-button-group"><label>Zmień status:</label> <span class="wc-action-button-group__items"><a class="button wc-action-button wc-action-button-processing processing" href="http://toolsmg.pl/wp-admin/admin-ajax.php?action=woocommerce_mark_order_status&amp;status=processing&amp;order_id=27&amp;_wpnonce=e80bf5346d" aria-label="Zmień status na w trakcie realizacji" title="Zmień status na w trakcie realizacji">W trakcie realizacji</a><a class="button wc-action-button wc-action-button-complete complete" href="http://toolsmg.pl/wp-admin/admin-ajax.php?action=woocommerce_mark_order_status&amp;status=completed&amp;order_id=27&amp;_wpnonce=e80bf5346d" aria-label="Zmień status na zrealizowane" title="Zmień status na zrealizowane">Zrealizowane</a></span></div>
+
+              <a class="button button-primary button-large" aria-label="Edytuj zamówienie" href="http://toolsmg.pl/wp-admin/post.php?action=edit&amp;post=27">Edytuj</a>
+            </div>
+          </footer>
+        </section>
+      </div>
+    </div>
+    <div class="wc-backbone-modal-backdrop modal-close"></div>
+  </script>
+  <script id="tmpl-wc-modal-view-order-25" type="text/html">
+    <div class="wc-backbone-modal wc-order-preview">
+      <div class="wc-backbone-modal-content">
+        <section class="wc-backbone-modal-main" role="main">
+          <header class="wc-backbone-modal-header">
+            <mark class="order-status status-processing"><span>W trakcie realizacji</span></mark>
+            <h1>Zamówienie: #25</h1>
+            <button class="modal-close modal-close-link dashicons dashicons-no-alt">
+              <span class="screen-reader-text">Zamknij okno modalne</span>
+            </button>
+          </header>
+          <article>
+
+            <div class="wc-order-preview-addresses">
+              <div class="wc-order-preview-address">
+                <h2>Dane płatności</h2>
+                1<br>1 1<br>1<br>12-222 1
+
+
+                <strong>E-mail</strong>
+                <a href="mailto:l.m.martyn@gmail.com">l.m.martyn@gmail.com</a>
+
+
+
+                <strong>Telefon</strong>
+                <a href="tel:1">1</a>
+
+
+
+                <strong>Płatność przez</strong>
+                Przelew bankowy
+
+              </div>
+
+
+
+              <div class="wc-order-preview-note">
+                <strong>Notatka</strong>
+                mam bardzo dużo uwag... mam bardzo dużo uwag... mam bardzo dużo uwag... mam bardzo dużo uwag... mam bardzo dużo uwag... mam bardzo dużo uwag... mam bardzo dużo uwag... mam bardzo dużo uwag... mam bardzo dużo uwag... mam bardzo dużo uwag... mam bardzo dużo uwag... mam bardzo dużo uwag... mam bardzo dużo uwag... mam bardzo dużo uwag... mam bardzo dużo uwag... mam bardzo dużo uwag... mam bardzo dużo uwag... mam bardzo dużo uwag... mam bardzo dużo uwag... mam bardzo dużo uwag... mam bardzo dużo uwag... mam bardzo dużo uwag...
+
+              </div>
+
+            </div>
+
+
+            <div class="wc-order-preview-table-wrapper">
+              <table class="wc-order-preview-table" cellspacing="0">
+                <thead>
+                <tr><th class="wc-order-preview-table__column--product">Produkt</th><th class="wc-order-preview-table__column--quantity">Ilość</th><th class="wc-order-preview-table__column--total">Suma</th>
+                </tr>
+                </thead>
+                <tbody><tr class="wc-order-preview-table__item wc-order-preview-table__item--2"><td class="wc-order-preview-table__column--product">test<div class="wc-order-item-sku"></div></td><td class="wc-order-preview-table__column--quantity">1</td><td class="wc-order-preview-table__column--total"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">€</span>55,00</bdi></span></td></tr>
+                </tbody>
+              </table>
+            </div>
+
+          </article>
+          <footer>
+            <div class="inner">
+              <div class="wc-action-button-group"><label>Zmień status:</label> <span class="wc-action-button-group__items"><a class="button wc-action-button wc-action-button-complete complete" href="http://toolsmg.pl/wp-admin/admin-ajax.php?action=woocommerce_mark_order_status&amp;status=completed&amp;order_id=25&amp;_wpnonce=e80bf5346d" aria-label="Zmień status na zrealizowane" title="Zmień status na zrealizowane">Zrealizowane</a></span></div>
+
+              <a class="button button-primary button-large" aria-label="Edytuj zamówienie" href="http://toolsmg.pl/wp-admin/post.php?action=edit&amp;post=25">Edytuj</a>
+            </div>
+          </footer>
+        </section>
+      </div>
+    </div>
+    <div class="wc-backbone-modal-backdrop modal-close"></div>
+  </script>
+
+  </body>
+</html>
