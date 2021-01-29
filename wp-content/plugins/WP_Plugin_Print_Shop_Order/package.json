@@ -1,0 +1,18 @@
+{
+  "name": "pso_kes",
+  "version": "1.0.0",
+  "description": "",
+  "repository":"https://github.com/born-kes/WP_Plugin_Print_Shop_Order.git",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "born-kes",
+  "license": "ISC",
+  "eslintConfig": {
+    "env": {
+      "ecmaVersion": 6,
+      "browser": true,
+      "node": true
+    }
+  }
+}
